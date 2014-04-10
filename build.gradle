@@ -1,0 +1,25 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+  group = 'stack-tracker'
+  version = '1.0-SNAPSHOT'
+  
+
+description = """"""
+
+sourceCompatibility = 1.5
+targetCompatibility = 1.5
+
+
+
+repositories {
+        
+    mavenRepo urls: ["https://repository.jboss.org/nexus/service/local/staging/deploy/maven2/"]
+    mavenRepo urls: ["http://repo.maven.apache.org/maven2"]
+}
+dependencies {
+compile "org.javassist:javassist:3.18.0-GA"
+testCompile "org.testng:testng:6.1.1"
+}
+
+task wrapper(type: Wrapper)
